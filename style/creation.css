@@ -1,7 +1,15 @@
 .creation{
     width: 100%;
     margin: 0;
-   
+   position: relative;
+}
+
+.creation__image--background{
+    position: absolute;
+    top: 150px;
+    left: -150px;
+    max-width: 250px;
+    width: 100%;
 }
 
 .creation__box{
