@@ -5,7 +5,7 @@ const checkSizeOfUploadedImage = () => {
     const imageBox = document.querySelector(".js-box");
 
     imageElement.onload = () => {
-        if(imageElement.height > "900"){
+        if (imageElement.height > "900") {
             imageBox.classList.add("creation__box--biggerImage");
         } else {
             imageBox.classList.remove("creation__box--biggerImage")
@@ -20,7 +20,7 @@ const addNewImage = (event) => {
     if (file) {
         imageElement.src = URL.createObjectURL(file)
     };
-checkSizeOfUploadedImage();
+    checkSizeOfUploadedImage();
 }
 
 const creationInit = () => {
@@ -106,11 +106,10 @@ const prepareIndex = () => {
     const altHolder = document.querySelector(".js-alt").value;
     const base = document.querySelector(".js-base");
     chooseBase(base, urlHolder, altHolder);
-    clearInputs(urlHolder, altHolder); 
+    clearInputs(urlHolder, altHolder);
 
     var blob = new Blob([htmlString], { type: "text/plain;charset=utf-8" });
     saveAs(blob, "index.html");
-    
 }
 
 const downloadCreation = () => {
@@ -122,25 +121,19 @@ const showMessage = () => {
     const alert = document.querySelector(".js-alert");
     if (imageElement.src === "https://sweglarz.github.io/mailing-creator/img/background.jpg") {
         alert.textContent = "Musisz przesłać kreację!"
-    } else{
+    } else {
         alert.textContent = "";
         downloadCreation();
     }
 }
 
-const clearInputs = () => {
-
-}
-
 const onFormSubmit = (event) => {
     event.preventDefault();
     showMessage();
-    clearInputs();
 }
 
 const settingsInit = () => {
     const settingsForm = document.querySelector(".js-settingsForm");
     settingsForm.addEventListener("submit", onFormSubmit);
-    
 }
 settingsInit();
