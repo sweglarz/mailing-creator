@@ -120,7 +120,7 @@ const downloadCreation = () => {
 
 const showMessage = () => {
     const alert = document.querySelector(".js-alert");
-    if (imageElement.src === "http://127.0.0.1:5500/img/background.jpg") {
+    if (imageElement.src === "https://sweglarz.github.io/mailing-creator/img/background.jpg") {
         alert.textContent = "Musisz przesłać kreację!"
     } else{
         alert.textContent = "";
