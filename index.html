@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css.map">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type ="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/creation.css">
+    <link rel="stylesheet" href="style/settings.css">
+    <link rel="stylesheet" href="style/button.css">
+    <link rel="stylesheet" href="style/wrapper.css">
+    <script defer src="javascript/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+    <title>Kreator mailingu</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img src="img/logo.png" alt="" class="header__logo">
+        </header>
+        <main class="main">
+            <img class="wrapper__image--left" src="/img/mail.png" alt="">
+            <img class="wrapper__image--right" src="/img/newmail.png" alt="">
+
+            <section class="creation">
+                <div class="creation__box js-box">
+                    <img src="img/background.jpg" alt="" class="creation__image js-creationImage">
+                </div>
+                <form runat="server" class="creation__form js-creationForm">
+                    <input accept="image/*" type="file" class="creation__input js-creationInput" type="file">
+                    <button class="button button--smaller js-creationButton">Prześlij</button>
+                </form>
+            </section>
+            <section class="settings">
+                <form method="get" class="settings__form js-settingsForm">
+                    <label for="base" class="settings__label">
+                        <span class="settings__text">
+                            Wybierz bazę do której wysyłasz mailing
+                        </span>
+                        <select class="settings__field js-base" name="mailingBase" id="base">
+                            <option value="wp">WIRTUALNA POLSKA</option>
+                            <option value="onet">ONET</option>
+                            <option value="interia">INTERIA</option>
+                        </select>
+                    </label>
+                    <label for="url" class="settings__label">
+                        <span class="settings__text">
+                            Podaj adres URL strony docelowej
+                        </span>
+                        <input type="url" class="settings__field js-url" id="url" required
+                            placeholder="podaj adres URL...">
+                    </label>
+                    <label for="alt" class="settings__label">
+                        <span class="settings__text">
+                            Podaj tekst alternatywny <br> <span class="settings__span">(pokaże się gdy obrazek się nie
+                                wyświetli)</span>
+                        </span>
+                        <input type="text" class="settings__field js-alt" id="alt" required
+                            placeholder="wpisz tekst alternatywny...">
+                    </label>
+                    <button value="download" class="button">Pobierz</button>
+                </form>
+                <span class="settings__alert js-alert"></span>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

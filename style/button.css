@@ -1,0 +1,27 @@
+.button{
+    font-family: 'Josefin Sans', sans-serif;
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid transparent;
+    background-color: #424561;
+    color: #fff;
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 1px 1px 5px 0px #828282;
+    
+}
+
+.button--smaller{
+    margin: 0;
+    max-width: 200px;
+}
+
+.button:hover{
+    background-color: #fff;
+    color: #424561;
+    border: 1px solid #424561;
+}

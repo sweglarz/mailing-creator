@@ -1,0 +1,8 @@
+.header{
+    margin-bottom: 20px;
+}
+
+.header__logo{
+    max-width: 200px;
+    width: 100%;
+}

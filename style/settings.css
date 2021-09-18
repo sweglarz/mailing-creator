@@ -1,0 +1,37 @@
+.settings__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.settings__label{
+    padding: 10px;
+}
+
+.settings__text{
+    display: inline-block;
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.settings__span{
+    font-size: 14px;
+}
+
+.settings__field{
+    max-width: 350px;
+    width: 100%;
+    padding: 7px;
+}
+
+.settings__alert{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: red;
+}
