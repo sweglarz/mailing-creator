@@ -2,17 +2,3 @@
     margin: 0 auto;
     max-width: 1200px;
 }
-
-.wrapper__image--left{
-    position: absolute;
-    top: 350px;
-    left: 150px;
-    width: 250px;
-}
-.wrapper__image--right{
-    position: absolute;
-    top: 100px;
-    right: 100px;
-    width: 250px;
-    z-index: -1;
-}
