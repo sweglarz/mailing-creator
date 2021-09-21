@@ -5,7 +5,7 @@
         const imageBox = document.querySelector(".js-box");
 
         imageElement.addEventListener("load", () => {
-            if (imageElement.height > 700) {
+            if (imageElement.height > 450) {
                 imageBox.classList.add("creation__box--biggerImage");
             } else {
                 imageBox.classList.remove("creation__box--biggerImage")
