@@ -1,6 +1,16 @@
 {
     const imageElement = document.querySelector(".js-creationImage");
 
+    const showTextOverTheCreation = (yourText) => {
+        const creationText = document.querySelector(".js-imageText");
+        creationText.textContent = `${yourText}`
+    };
+
+    const yourTextOverTheCreation = () => {
+        const yourText = document.querySelector(".js-text").value.trim();
+        yourText.value !== "" ? showTextOverTheCreation(yourText) : ""; 
+    }
+
     const checkSizeOfUploadedImage = () => {
         const imageBox = document.querySelector(".js-box");
 
@@ -21,6 +31,7 @@
             imageElement.src = URL.createObjectURL(file)
         };
         checkSizeOfUploadedImage();
+        yourTextOverTheCreation();
     }
 
     const creationInit = () => {
