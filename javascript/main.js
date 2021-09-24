@@ -4,6 +4,7 @@
     const showTextOverTheCreation = (yourText) => {
         const creationText = document.querySelector(".js-imageText");
         creationText.textContent = `${yourText}`
+        creationText.textContent !== "" ? creationText.classList.add("creation__imageText") : "";
     };
 
     const yourTextOverTheCreation = () => {
@@ -51,6 +52,7 @@
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
+        <h1>${yourText}</h1>
         <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
             <tr>
                 <td><a href="<KLIK>${urlHolder}</KLIK>" target="_blank">
