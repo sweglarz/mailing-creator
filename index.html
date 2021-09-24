@@ -33,6 +33,7 @@
                 <img class="creation__image--background" src="img/mail.png" alt="">
 
                 <div class="creation__box js-box">
+                    <span class="creation__imageText js-imageText"></span>
                     <img src="img/background.jpg" alt="" class="creation__image js-creationImage">
                 </div>
                 <form runat="server" class="creation__form js-creationForm">
@@ -44,7 +45,7 @@
                 <img class="settings__image--background" src="img/newmail.png" alt="">
 
                 <form method="get" class="settings__form js-settingsForm">
-                    <label for="base" class="settings__label">
+                    <label for="base" class="settings__label settings__label--first">
                         <span class="settings__text">
                             Wybierz bazę do której wysyłasz mailing
                         </span>
@@ -54,12 +55,19 @@
                             <option value="interia">INTERIA</option>
                         </select>
                     </label>
+                    <label for="text" class="settings__label">
+                        <span class="settings__text">
+                            Podaj tekst, który pojawi się nad kreacją<br> <span class="settings__span">(opcjonalnie)</span>
+                        </span>
+                        <input type="text" class="settings__field js-text" id="text"
+                            placeholder="Twój tekst...">
+                    </label>
                     <label for="url" class="settings__label">
                         <span class="settings__text">
                             Podaj adres URL strony docelowej
                         </span>
                         <input type="url" class="settings__field js-url" id="url" required
-                            placeholder="podaj adres URL...">
+                            placeholder="Podaj adres URL...">
                     </label>
                     <label for="alt" class="settings__label">
                         <span class="settings__text">
@@ -67,7 +75,7 @@
                                 wyświetli)</span>
                         </span>
                         <input type="text" class="settings__field js-alt" id="alt" required
-                            placeholder="wpisz tekst alternatywny...">
+                            placeholder="Wpisz tekst alternatywny...">
                     </label>
                     <button value="download" class="button">Pobierz</button>
                 </form>
