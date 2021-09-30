@@ -52,7 +52,7 @@
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
-        <h1 style="display: inline-block; max-width: 500px; padding: 20px;">${yourText}</h1>
+        <h1 style="display: block; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; font-weight: 400">${yourText}</h1>
         <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
             <tr>
                 <td><a href="<KLIK>${urlHolder}</KLIK>" target="_blank">
@@ -73,7 +73,7 @@
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
-        <h1 style="display: inline-block; max-width: 500px; padding: 20px;">${yourText}</h1>
+        <h1 style="display: block; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; font-weight: 400">${yourText}</h1>
         <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
             <tr>
                 <td><a href="${urlHolder}" target="_blank">
@@ -94,7 +94,7 @@
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
-        <h1 style="display: inline-block; max-width: 500px; padding: 20px;">${yourText}</h1>    
+        <h1 style="display: block; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; font-weight: 400">${yourText}</h1>    
         <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
             <tr>
                 <td><a href="${urlHolder}" target="_blank">
