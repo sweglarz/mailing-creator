@@ -1,17 +1,17 @@
 {
     const imageElement = document.querySelector(".js-creationImage");
-
+    
     const showTextOverTheCreation = (yourText) => {
         const creationText = document.querySelector(".js-imageText");
-        creationText.textContent = `${yourText}`
-        creationText.textContent !== "" ? creationText.classList.add("creation__imageText") : "";
+        creationText.innerText = `${yourText}`
+        creationText.innerText !== "" ? creationText.classList.add("creation__imageText") : creationText.classList.remove("creation__imageText");
     };
-
+    
     const yourTextOverTheCreation = () => {
-        const yourText = document.querySelector(".js-text").value.trim();
-        yourText.value !== "" ? showTextOverTheCreation(yourText) : ""; 
+        const yourText = document.querySelector(".js-text").value;
+        yourText.value !== "" ? showTextOverTheCreation(yourText) : "";
     }
-
+    
     const checkSizeOfUploadedImage = () => {
         const imageBox = document.querySelector(".js-box");
 
@@ -32,7 +32,7 @@
             imageElement.src = URL.createObjectURL(file)
         };
         checkSizeOfUploadedImage();
-        yourTextOverTheCreation();
+        yourTextOverTheCreation()
     }
 
     const creationInit = () => {
@@ -41,10 +41,10 @@
     }
     creationInit();
 
-    const chooseBase = (base, urlHolder, altHolder) => {
+    const chooseBase = (base, urlHolder, altHolder, yourText) => {
 
         if (base.value === "wp") {
-            return htmlString = `
+            htmlString = `
 <html>
 <head>
     <title>WP</title>
@@ -65,8 +65,8 @@
     </body>
 </html>`
         } else if (base.value === "onet") {
-            return htmlString =
-                `<html>
+            htmlString =`
+<html>
 <head>
     <title>ONET</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -85,8 +85,8 @@
     </body>
 </html>`
         } else {
-            return htmlString =
-                `<html>
+            htmlString = `
+<html>
 <head>
     <title>INTERIA</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -110,7 +110,6 @@
     const prepareImage = () => {
         let imagePath = imageElement.src;
         let fileName = "1.jpg";
-
         saveAs(imagePath, fileName);
     }
 
@@ -118,8 +117,9 @@
         const urlHolder = document.querySelector(".js-url").value;
         const altHolder = document.querySelector(".js-alt").value;
         const base = document.querySelector(".js-base");
-        chooseBase(base, urlHolder, altHolder);
+        const yourText = document.querySelector(".js-text").value;
 
+        chooseBase(base, urlHolder, altHolder, yourText);
         const blob = new Blob([htmlString], { type: "text/plain;charset=utf-8" });
         saveAs(blob, "index.html");
     }
@@ -129,7 +129,7 @@
         prepareIndex();
     }
 
-    const showMessage = () => {
+    const showMessage = (yourText) => {
         const alert = document.querySelector(".js-alert");
         if (imageElement.src === "https://sweglarz.github.io/mailing-creator/img/background.jpg") {
             alert.textContent = "Musisz przesłać kreację!"
