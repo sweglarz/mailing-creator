@@ -1,17 +1,17 @@
 {
     const imageElement = document.querySelector(".js-creationImage");
-    
+
     const showTextOverTheCreation = (yourText) => {
         const creationText = document.querySelector(".js-imageText");
         creationText.innerText = `${yourText}`
         creationText.innerText !== "" ? creationText.classList.add("creation__imageText") : creationText.classList.remove("creation__imageText");
     };
-    
+
     const yourTextOverTheCreation = () => {
         const yourText = document.querySelector(".js-text").value;
         yourText.value !== "" ? showTextOverTheCreation(yourText) : "";
     }
-    
+
     const checkSizeOfUploadedImage = () => {
         const imageBox = document.querySelector(".js-box");
 
@@ -52,7 +52,7 @@
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
-        <h1 style="display: block; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; font-weight: 400">${yourText}</h1>
+        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
         <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
             <tr>
                 <td><a href="<KLIK>${urlHolder}</KLIK>" target="_blank">
@@ -65,7 +65,7 @@
     </body>
 </html>`
         } else if (base.value === "onet") {
-            htmlString =`
+            htmlString = `
 <html>
 <head>
     <title>ONET</title>
@@ -73,7 +73,7 @@
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
-        <h1 style="display: block; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; font-weight: 400">${yourText}</h1>
+        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
         <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
             <tr>
                 <td><a href="${urlHolder}" target="_blank">
@@ -94,7 +94,7 @@
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
-        <h1 style="display: block; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; font-weight: 400">${yourText}</h1>    
+        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
         <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
             <tr>
                 <td><a href="${urlHolder}" target="_blank">
