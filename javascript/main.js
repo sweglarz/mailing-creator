@@ -43,28 +43,7 @@
 
     const chooseBase = (base, urlHolder, altHolder, yourText) => {
 
-        if (base.value === "wp") {
-            htmlString = `
-<html>
-<head>
-    <title>WP</title>
-    <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-2">
-    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-</head>
-    <body>
-        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
-        <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
-            <tr>
-                <td><a href="<KLIK>${urlHolder}</KLIK>" target="_blank">
-                    <img src="cid:1.jpg" alt="${altHolder}"
-                    title="&#8658; Kliknij, by dowiedziec sie wiecej! &#8656;"
-                    style="display:block; max-width: 600px; width: 100%;" border="0"></a>
-                </td>
-            </tr>
-        </table>
-    </body>
-</html>`
-        } else if (base.value === "onet") {
+        if (base.value === "onet") {
             htmlString = `
 <html>
 <head>
@@ -85,11 +64,95 @@
         </table>
     </body>
 </html>`
-        } else {
+        } else if (base.value === "wp") {
+            htmlString = `
+<html>
+<head>
+    <title>WP</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-2">
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+</head>
+    <body>
+        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
+        <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+            <tr>
+                <td><a href="<KLIK>${urlHolder}</KLIK>" target="_blank">
+                    <img src="cid:1.jpg" alt="${altHolder}"
+                    title="&#8658; Kliknij, by dowiedziec sie wiecej! &#8656;"
+                    style="display:block; max-width: 600px; width: 100%;" border="0"></a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>`
+        }  else if (base.value === "neobazy") {
+            htmlString = `
+<html>
+<head>
+    <title>NEOBAZY</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+</head>
+    <body>
+        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
+        <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+            <tr>
+                <td><a href="${urlHolder}" target="_blank">
+                    <img src="1.jpg" alt="${altHolder}"
+                    title="&#8658; Kliknij, by dowiedziec sie wiecej! &#8656;"
+                    style="display:block; max-width: 600px; width: 100%;" border="0"></a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>`
+        } else if (base.value === "interia") {
             htmlString = `
 <html>
 <head>
     <title>INTERIA</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+</head>
+    <body>
+        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
+        <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+            <tr>
+                <td><a href="${urlHolder}" target="_blank">
+                    <img src="1.jpg" alt="${altHolder}"
+                    title="&#8658; Kliknij, by dowiedziec sie wiecej! &#8656;"
+                    style="display:block; max-width: 600px; width: 100%;" border="0"></a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>`
+        } else if (base.value === "sample") {
+            htmlString = `
+<html>
+<head>
+    <title>SAMPLE</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+</head>
+    <body>
+        <h1 style="display: block; font-size: 18px; max-width: 580px; margin: 0 auto; padding: 20px 10px; text-align: center; font-weight: 400">${yourText}</h1>
+        <table max-width="600" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+            <tr>
+                <td><a href="${urlHolder}" target="_blank">
+                    <img src="1.jpg" alt="${altHolder}"
+                    title="&#8658; Kliknij, by dowiedziec sie wiecej! &#8656;"
+                    style="display:block; max-width: 600px; width: 100%;" border="0"></a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>`
+        } else {
+            htmlString = `
+<html>
+<head>
+    <title>DOMIPORTA</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
