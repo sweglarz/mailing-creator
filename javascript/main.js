@@ -69,7 +69,7 @@
 <html>
 <head>
     <title>WP</title>
-    <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-2">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 </head>
     <body>
